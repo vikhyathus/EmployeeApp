@@ -13,11 +13,13 @@ class DisplayUserDetails: UIViewController {
     @IBOutlet weak var empIDLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var departmentLabel: UILabel!
     
     var name: String!
     var empid: String!
     var gender: String!
     var address: String!
+    var department: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,7 @@ class DisplayUserDetails: UIViewController {
         empIDLabel.text = empid
         genderLabel.text = gender
         addressLabel.text = address
+        departmentLabel.text = department
     }
 }
 

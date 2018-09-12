@@ -14,11 +14,13 @@ class EmployeeObject {
     var empID: String
     var gender: String
     var address: String
+    var department: Department
     
-    init(name: String, empId: String, gender: String, address: String) {
+    init(name: String, empId: String, gender: String, address: String, department: Department) {
         self.address = address
         self.empID = empId
         self.gender = gender
         self.name = name
+        self.department = department
     }
 }

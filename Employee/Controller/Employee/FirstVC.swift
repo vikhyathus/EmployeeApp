@@ -46,7 +46,7 @@ class FirstVC: UIViewController {
         do {
             let obj = try context.fetch(request)
             for emp in obj {
-                listOfEmployees.append(EmployeeObject(name: emp.name!, empId: emp.empID!, gender: emp.gender!, address: emp.address!))
+                listOfEmployees.append(EmployeeObject(name: emp.name!, empId: emp.empID!, gender: emp.gender!, address: emp.address!, department: emp.worksfor!))
             }
         }
         catch {
@@ -96,18 +96,19 @@ extension FirstVC: UITableViewDelegate,UITableViewDataSource {
             nextScreen.empid = listOfEmployees[indexPath.row].empID
             nextScreen.name = listOfEmployees[indexPath.row].name
             nextScreen.gender = listOfEmployees[indexPath.row].gender
+            nextScreen.department = listOfEmployees[indexPath.row].department.name
         }
         else {
             nextScreen.address = filterData[indexPath.row].address
             nextScreen.empid = filterData[indexPath.row].empID
             nextScreen.name = filterData[indexPath.row].name
             nextScreen.gender = filterData[indexPath.row].gender
+            nextScreen.department = filterData[indexPath.row].department.name
         }
         navigationController?.pushViewController(nextScreen, animated: true)
     }
     
 }
-
 
 extension FirstVC: UISearchBarDelegate {
     
@@ -138,7 +139,7 @@ extension FirstVC: UISearchBarDelegate {
             let obj = try context.fetch(request)
             for emp in obj {
                 print("filter aagtha ide")
-               filterData.append(EmployeeObject(name: emp.name!, empId: emp.empID!, gender: emp.gender!, address: emp.address!))
+                filterData.append(EmployeeObject(name: emp.name!, empId: emp.empID!, gender: emp.gender!, address: emp.address!, department: emp.worksfor!))
             }
             
         }
