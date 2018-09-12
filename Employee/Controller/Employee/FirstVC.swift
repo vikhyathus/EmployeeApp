@@ -54,6 +54,32 @@ class FirstVC: UIViewController {
         }
         
     }
+    func deleteObject(text: String) {
+        
+        let context = managedObjectContext()
+        
+        let pred = NSPredicate(format: "name == %@ ", text)
+        
+        let request = NSFetchRequest<Employee>(entityName: "Employee")
+        
+        request.predicate = pred
+        // request.sortDescriptors = [NSSortDescriptor(key: "empId", ascending: true)]
+        
+        do {
+            let obj = try context.fetch(request)
+            
+            for item in obj {
+                context.delete(item)
+            }
+            
+            try context.save()
+            
+        }
+        catch {
+            
+        }
+        
+    }
     
     func managedObjectContext() -> NSManagedObjectContext {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -106,6 +132,15 @@ extension FirstVC: UITableViewDelegate,UITableViewDataSource {
             nextScreen.department = filterData[indexPath.row].department.name
         }
         navigationController?.pushViewController(nextScreen, animated: true)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            deleteObject(text: listOfEmployees[indexPath.row].name)
+            listOfEmployees.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
     }
     
 }

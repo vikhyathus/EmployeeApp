@@ -25,6 +25,7 @@ class FormVC: UIViewController {
         fetchDepartments()
         pickerView.delegate = self
         pickerView.dataSource = self
+        searchString = pickerViewDataSource[0]
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
