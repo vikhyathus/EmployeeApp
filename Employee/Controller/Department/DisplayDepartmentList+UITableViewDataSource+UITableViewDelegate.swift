@@ -26,4 +26,11 @@ extension DisplayDepartmentList: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 118.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextScreen = storyboard?.instantiateViewController(withIdentifier: "DepartmentEmployee") as! DepartmentEmployeeVC
+        nextScreen.searchString = listOfDepartments[indexPath.row].depName
+        navigationController?.pushViewController(nextScreen, animated: true)
+        
+    }
 }

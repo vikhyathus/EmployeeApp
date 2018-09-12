@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4567B0214904AA00C1DE41 /* FormVC+PickerViewDelegate+PickerViewDataSource .swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4567AF214904AA00C1DE41 /* FormVC+PickerViewDelegate+PickerViewDataSource .swift */; };
+		DF4567B22149173100C1DE41 /* DepartmentEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4567B12149173100C1DE41 /* DepartmentEmployeeVC.swift */; };
+		DF4567B421491C4B00C1DE41 /* DepartmentEmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4567B321491C4B00C1DE41 /* DepartmentEmployeeCell.swift */; };
+		DF4567B621491D8E00C1DE41 /* DepartmentEmployeeVC+UITableViewDelegate+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4567B521491D8E00C1DE41 /* DepartmentEmployeeVC+UITableViewDelegate+UITableViewDataSource.swift */; };
 		DF5BB7392140E2D8004293B6 /* DeleteEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5BB7382140E2D8004293B6 /* DeleteEmployee.swift */; };
 		DF5DD2022148D96400E312D1 /* Department+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5DD1FE2148D96400E312D1 /* Department+CoreDataClass.swift */; };
 		DF5DD2032148D96400E312D1 /* Department+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5DD1FF2148D96400E312D1 /* Department+CoreDataProperties.swift */; };
@@ -30,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF4567AF214904AA00C1DE41 /* FormVC+PickerViewDelegate+PickerViewDataSource .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormVC+PickerViewDelegate+PickerViewDataSource .swift"; sourceTree = "<group>"; };
+		DF4567B12149173100C1DE41 /* DepartmentEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentEmployeeVC.swift; sourceTree = "<group>"; };
+		DF4567B321491C4B00C1DE41 /* DepartmentEmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentEmployeeCell.swift; sourceTree = "<group>"; };
+		DF4567B521491D8E00C1DE41 /* DepartmentEmployeeVC+UITableViewDelegate+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepartmentEmployeeVC+UITableViewDelegate+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		DF5BB7382140E2D8004293B6 /* DeleteEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteEmployee.swift; sourceTree = "<group>"; };
 		DF5DD1FE2148D96400E312D1 /* Department+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Department+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DF5DD1FF2148D96400E312D1 /* Department+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Department+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				DF5DD2162148F31100E312D1 /* DepartmentTableCell.swift */,
+				DF4567B321491C4B00C1DE41 /* DepartmentEmployeeCell.swift */,
 				DF688E55214003FA009981D9 /* DisplayUserDetails.swift */,
 				DF688E51213FE5A0009981D9 /* TableCellTableViewCell.swift */,
 			);
@@ -109,6 +118,7 @@
 			children = (
 				DF5BB7382140E2D8004293B6 /* DeleteEmployee.swift */,
 				DF688E4D213FD3D3009981D9 /* FormVC.swift */,
+				DF4567AF214904AA00C1DE41 /* FormVC+PickerViewDelegate+PickerViewDataSource .swift */,
 				DF688E36213FCF92009981D9 /* FirstVC.swift */,
 			);
 			path = Employee;
@@ -120,6 +130,8 @@
 				DF5DD2102148ED9200E312D1 /* DisplayDepartmentList.swift */,
 				DF5DD2142148F22B00E312D1 /* DisplayDepartmentList+UITableViewDataSource+UITableViewDelegate.swift */,
 				DF5DD20E2148EA8C00E312D1 /* AddDepartmentVC.swift */,
+				DF4567B12149173100C1DE41 /* DepartmentEmployeeVC.swift */,
+				DF4567B521491D8E00C1DE41 /* DepartmentEmployeeVC+UITableViewDelegate+UITableViewDataSource.swift */,
 			);
 			path = Department;
 			sourceTree = "<group>";
@@ -235,13 +247,17 @@
 				DF5DD2112148ED9200E312D1 /* DisplayDepartmentList.swift in Sources */,
 				DF5DD2152148F22B00E312D1 /* DisplayDepartmentList+UITableViewDataSource+UITableViewDelegate.swift in Sources */,
 				DF688E3D213FCF92009981D9 /* Employee.xcdatamodeld in Sources */,
+				DF4567B0214904AA00C1DE41 /* FormVC+PickerViewDelegate+PickerViewDataSource .swift in Sources */,
 				DF688E52213FE5A0009981D9 /* TableCellTableViewCell.swift in Sources */,
 				DF688E56214003FA009981D9 /* DisplayUserDetails.swift in Sources */,
 				DF688E4E213FD3D3009981D9 /* FormVC.swift in Sources */,
 				DF688E50213FDBBD009981D9 /* Employee.swift in Sources */,
 				DF5BB7392140E2D8004293B6 /* DeleteEmployee.swift in Sources */,
 				DF5DD20F2148EA8C00E312D1 /* AddDepartmentVC.swift in Sources */,
+				DF4567B621491D8E00C1DE41 /* DepartmentEmployeeVC+UITableViewDelegate+UITableViewDataSource.swift in Sources */,
 				DF5DD2022148D96400E312D1 /* Department+CoreDataClass.swift in Sources */,
+				DF4567B421491C4B00C1DE41 /* DepartmentEmployeeCell.swift in Sources */,
+				DF4567B22149173100C1DE41 /* DepartmentEmployeeVC.swift in Sources */,
 				DF5DD2042148D96400E312D1 /* Employee+CoreDataClass.swift in Sources */,
 				DF688E35213FCF92009981D9 /* AppDelegate.swift in Sources */,
 				DF5DD2052148D96400E312D1 /* Employee+CoreDataProperties.swift in Sources */,
